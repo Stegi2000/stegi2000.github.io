@@ -1,0 +1,17 @@
+User-agent: *
+Allow: /
+
+# Disallow administrative URLs
+Disallow: /admin/
+Disallow: /private/
+
+# Allow CSS, JavaScript, and Images
+Allow: /*.css$
+Allow: /*.js$
+Allow: /*.jpg$
+Allow: /*.jpeg$
+Allow: /*.png$
+Allow: /*.gif$
+
+# Sitemap
+Sitemap: https://deine-domain.de/sitemap.xml
