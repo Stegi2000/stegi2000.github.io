@@ -1,0 +1,269 @@
+/* contact_form.css */
+.contact-section {
+    max-width: 800px;
+    margin: 2rem auto;
+    padding: 2rem;
+}
+
+.contact-intro {
+    text-align: center;
+    color: #567d1d;
+    margin-bottom: 2rem;
+    font-size: 1.2rem;
+}
+
+.eco-form {
+    background: #fff;
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.form-group {
+    margin-bottom: 1.5rem;
+    position: relative;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+    color: #334d00;
+}
+
+.required {
+    color: #e63946;
+    margin-left: 0.25rem;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 0.8rem;
+    border: 2px solid #e0e8d5;
+    border-radius: 8px;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    border-color: #567d1d;
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(86, 125, 29, 0.1);
+}
+
+.character-counter {
+    text-align: right;
+    font-size: 0.9rem;
+    color: #666;
+    margin-top: 0.5rem;
+}
+
+.error-message {
+    color: #e63946;
+    font-size: 0.9rem;
+    margin-top: 0.5rem;
+    padding: 0.5rem;
+    border-radius: 4px;
+    background: #fff5f5;
+    border-left: 3px solid #e63946;
+    display: none;
+}
+
+.error-message.visible {
+    display: block;
+    animation: fadeIn 0.3s ease-out;
+}
+
+/* Rating Stars */
+.rating {
+    display: flex;
+    flex-direction: row-reverse;
+    gap: 0.5rem;
+    justify-content: flex-start;
+    margin-top: 0.5rem;
+}
+
+.rating input {
+    display: none;
+}
+
+.rating label {
+    cursor: pointer;
+    font-size: 2rem;
+    color: #ccc;
+    transition: color 0.2s ease;
+}
+
+.rating label:hover,
+.rating label:hover ~ label,
+.rating input:checked ~ label {
+    color: #ffd700;
+}
+
+.rating label:focus-visible {
+    outline: 2px solid #567d1d;
+    border-radius: 4px;
+}
+
+/* Form Footer */
+.form-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 2rem;
+}
+
+.required-notice {
+    font-size: 0.9rem;
+    color: #666;
+}
+
+.eco-btn {
+    padding: 0.8rem 1.5rem;
+    border: none;
+    border-radius: 8px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.eco-btn-primary {
+    background: #334d00;
+    color: white;
+}
+
+.eco-btn-primary:hover {
+    background: #567d1d;
+    transform: translateY(-2px);
+}
+
+.btn-content {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+/* Contact Info */
+.contact-info {
+    margin-top: 3rem;
+    padding: 2rem;
+    background: #f4f8f0;
+    border-radius: 12px;
+}
+
+.contact-methods {
+    display: grid;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.contact-method {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.contact-method .icon {
+    font-size: 1.5rem;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Loading State */
+.eco-btn.loading {
+    position: relative;
+    color: transparent;
+}
+
+.eco-btn.loading::after {
+    content: "";
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    top: 50%;
+    left: 50%;
+    margin: -10px 0 0 -10px;
+    border: 2px solid #fff;
+    border-top-color: transparent;
+    border-radius: 50%;
+    animation: button-loading 0.6s linear infinite;
+}
+
+@keyframes button-loading {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .contact-section {
+        padding: 1rem;
+    }
+
+    .eco-form {
+        padding: 1.5rem;
+    }
+
+    .form-footer {
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .required-notice {
+        order: 2;
+    }
+}
+/* Sternebewertung */
+.rating {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: flex-start;
+    padding: 1rem 0;
+}
+
+.rating input[type="radio"] {
+    display: none;
+}
+
+.rating label {
+    cursor: pointer;
+    font-size: 2.5rem;
+    padding: 0 0.2rem;
+    color: #ddd;
+    transition: color 0.3s ease;
+}
+
+.rating label:before {
+    content: '★';
+}
+
+.rating input[type="radio"]:checked ~ label,
+.rating label:hover,
+.rating label:hover ~ label {
+    color: #ffd700;
+}
+
+/* Hover Effekt */
+.rating:hover input[type="radio"]:checked ~ label:not(:hover) {
+    color: #ddd;
+}
+
+/* Responsives Design */
+@media (max-width: 768px) {
+    .rating label {
+        font-size: 2rem;
+    }
+}

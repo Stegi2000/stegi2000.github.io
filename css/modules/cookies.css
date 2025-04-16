@@ -1,0 +1,142 @@
+.eco-cookie-consent {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: linear-gradient(15deg, #2d4a0f, #3e6a1a);
+    color: #fff;
+    padding: 1.5rem;
+    z-index: 9999;
+    box-shadow: 0 -8px 25px rgba(0,0,0,0.15);
+    transform: translateY(100%);
+    transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.eco-cookie-consent.visible {
+    transform: translateY(0);
+}
+
+.eco-cookie-content {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.eco-cookie-header h2 {
+    color: #ffd700;
+    font-size: 1.5rem;
+    margin-bottom: 0.8rem;
+}
+
+.eco-cookie-options {
+    margin: 1.5rem 0;
+}
+
+.eco-cookie-option {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 1rem;
+    border-radius: 8px;
+    margin-bottom: 1rem;
+}
+
+.option-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 0.5rem;
+}
+
+.option-header input[type="checkbox"] {
+    margin-right: 0.8rem;
+    width: 20px;
+    height: 20px;
+}
+
+.option-header label {
+    font-weight: 600;
+}
+
+.option-description {
+    font-size: 0.9rem;
+    opacity: 0.9;
+}
+
+.cookie-details {
+    display: none;
+    margin-top: 1rem;
+    padding: 1rem;
+    background: rgba(0, 0, 0, 0.2);
+    border-radius: 4px;
+}
+
+.cookie-details.visible {
+    display: block;
+}
+
+.cookie-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.9rem;
+}
+
+.cookie-table th,
+.cookie-table td {
+    padding: 0.5rem;
+    text-align: left;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.eco-cookie-actions {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.eco-btn {
+    padding: 0.8rem 1.5rem;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: all 0.2s ease;
+}
+
+.eco-btn-primary {
+    background: #ffd700;
+    color: #2d4a0f;
+}
+
+.eco-btn-secondary {
+    background: rgba(255, 255, 255, 0.2);
+    color: #fff;
+}
+
+.eco-btn-text {
+    background: none;
+    color: #fff;
+    text-decoration: underline;
+    padding: 0.8rem;
+}
+
+.eco-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+}
+
+.eco-btn-text:hover {
+    transform: none;
+    box-shadow: none;
+    opacity: 0.8;
+}
+
+@media (max-width: 768px) {
+    .eco-cookie-consent {
+        padding: 1rem;
+    }
+
+    .eco-cookie-actions {
+        flex-direction: column;
+    }
+
+    .eco-btn {
+        width: 100%;
+    }
+}

@@ -1,0 +1,57 @@
+/* Stile für Modal (Bildvergrößerung) */
+.modal {
+    display: none; /* Versteckt das Modal standardmäßig */
+    position: fixed; /* Fixiert das Modal */
+    z-index: 1; /* Stellt sicher, dass das Modal über anderen Elementen liegt */
+    padding-top: 60px; /* Fügt oben eine Polsterung von 60px hinzu */
+    left: 0; /* Positioniert das Modal am linken Rand */
+    top: 0; /* Positioniert das Modal am oberen Rand */
+    width: 100%; /* Setzt die Breite auf 100% */
+    height: 100%; /* Setzt die Höhe auf 100% */
+    overflow: auto; /* Ermöglicht das Scrollen, wenn der Inhalt zu groß ist */
+    background-color: rgba(0,0,0,0.9); /* Setzt die Hintergrundfarbe auf ein transparentes Schwarz */
+}
+
+.modal-content {
+    margin: auto; /* Zentriert das Bild horizontal */
+    display: block; /* Macht das Bild zu einem Block-Element */
+    width: 80%; /* Setzt die Breite auf 80% */
+    max-width: 700px; /* Setzt die maximale Breite auf 700px */
+}
+
+#caption {
+    margin: auto; /* Zentriert die Bildunterschrift horizontal */
+    display: block; /* Macht die Bildunterschrift zu einem Block-Element */
+    width: 80%; /* Setzt die Breite auf 80% */
+    max-width: 700px; /* Setzt die maximale Breite auf 700px */
+    text-align: center; /* Zentriert den Text */
+    color: #ccc; /* Setzt die Textfarbe auf hellgrau */
+    padding: 10px 0; /* Fügt oben und unten eine Polsterung von 10px hinzu */
+    height: 150px; /* Setzt die Höhe auf 150px */
+}
+
+.modal-content, #caption {
+    animation: zoom 0.6s; /* Fügt eine Zoom-Animation mit einer Dauer von 0.6s hinzu */
+}
+
+@keyframes zoom {
+    from {transform:scale(0)} /* Startet die Animation bei einer Skalierung von 0 */
+    to {transform:scale(1)} /* Endet die Animation bei einer Skalierung von 1 */
+}
+
+.close {
+    position: absolute; /* Positioniert das Schließen-Element absolut */
+    top: 15px; /* Positioniert es 15px vom oberen Rand entfernt */
+    right: 35px; /* Positioniert es 35px vom rechten Rand entfernt */
+    color: #f1f1f1; /* Setzt die Farbe auf ein helles Grau */
+    font-size: 40px; /* Setzt die Schriftgröße auf 40px */
+    font-weight: bold; /* Macht den Text fett */
+    transition: 0.3s; /* Fügt eine Übergangsanimation hinzu */
+}
+
+.close:hover,
+.close:focus {
+    color: #bbb; /* Ändert die Farbe bei Hover oder Fokus auf ein dunkleres Grau */
+    text-decoration: none; /* Entfernt die Standard-Unterstreichung */
+    cursor: pointer; /* Ändert den Mauszeiger auf eine Hand */
+}

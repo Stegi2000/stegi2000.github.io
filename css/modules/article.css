@@ -1,0 +1,158 @@
+/* article.css */
+/* Hauptstyles für Blog-Artikel */
+.blog-article {
+    max-width: 1000px;
+    margin: 120px auto 40px;
+    background: #fff;
+    border-radius: 15px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+    overflow: hidden;
+}
+
+/* Hero Section */
+.blog-hero {
+    position: relative;
+    height: 300px;
+    background: linear-gradient(120deg, #334d00, #567d1d);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+    text-align: center;
+}
+
+.blog-hero h1 {
+    color: #fff;
+    font-size: 2.8em;
+    margin: 0;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+    position: relative;
+    z-index: 2;
+}
+
+.blog-hero::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background:
+            linear-gradient(45deg, rgba(0,0,0,0.05) 25%, transparent 25%),
+            linear-gradient(-45deg, rgba(0,0,0,0.05) 25%, transparent 25%);
+    background-size: 60px 60px;
+    opacity: 0.1;
+    z-index: 1;
+}
+
+/* Artikel Intro */
+.blog-intro {
+    background: #fff;
+    padding: 2rem;
+    margin: -50px 2rem 0;
+    border-radius: 12px;
+    position: relative;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+    font-size: 1.2rem;
+    line-height: 1.8;
+    color: #444;
+}
+
+/* Artikel Content */
+.blog-content {
+    padding: 2rem 3rem;
+}
+
+/* Abschnitts-Styling */
+.blog-content section {
+    margin: 3rem 0;
+    padding: 2rem;
+    background: #fcfcfc;
+    border-radius: 12px;
+    border: 1px solid #f0f0f0;
+}
+
+.blog-content section h2 {
+    color: #334d00;
+    font-size: 1.8em;
+    margin-bottom: 1.5rem;
+    position: relative;
+    padding-bottom: 0.5rem;
+}
+
+.blog-content section h2::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 60px;
+    height: 3px;
+    background: #567d1d;
+    border-radius: 2px;
+}
+
+/* Bilder im Artikel */
+.blog-image-container {
+    margin: 2rem 0;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.blog-image-container img {
+    width: 100%;
+    height: auto;
+    display: block;
+    transition: transform 0.3s ease;
+}
+
+.blog-image-container:hover img {
+    transform: scale(1.02);
+}
+
+figcaption {
+    padding: 1rem;
+    background: #f8f8f8;
+    color: #666;
+    font-style: italic;
+    text-align: center;
+}
+
+/* Fact Boxes */
+.fact-box {
+    background: #f4f8f0;
+    border-left: 4px solid #567d1d;
+    padding: 1.5rem;
+    margin: 2rem 0;
+    border-radius: 0 12px 12px 0;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .blog-article {
+        margin: 100px 1rem 2rem;
+    }
+
+    .blog-hero {
+        height: 200px;
+    }
+
+    .blog-hero h1 {
+        font-size: 2em;
+    }
+
+    .blog-intro {
+        margin: -30px 1rem 0;
+        padding: 1.5rem;
+    }
+
+    .blog-content {
+        padding: 1.5rem;
+    }
+
+    .blog-content section {
+        padding: 1.5rem;
+    }
+}

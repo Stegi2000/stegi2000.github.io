@@ -1,0 +1,572 @@
+
+
+body {
+    font-family: Arial, sans-serif; /* Setzt die Schriftart auf Arial oder eine ähnliche serifenlose Schrift */
+    margin: 0; /* Entfernt den Standard-Rand des Body */
+    padding: 0; /* Entfernt die Standard-Padding des Body */
+    font-size: 1em; /* Setzt die Schriftgröße auf 1em */
+    background-color: #f4f4f4; /* Setzt die Hintergrundfarbe auf ein helles Grau */
+    color: #333; /* Setzt die Textfarbe auf ein dunkles Grau */
+    line-height: 1.8; /* Erhöht den Zeilenabstand für bessere Lesbarkeit */
+}
+
+/* Header-Bereich */
+header {
+    background-color: #334d00;
+    color: #fff;
+    padding: 20px 0;
+    position: fixed; /* Fixierte Position */
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000; /* Hoher z-index damit Header immer oben ist */
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.header-content {
+    display: flex; /* Verwendet Flexbox für die Anordnung der Elemente */
+    justify-content: space-between; /* Verteilt die Elemente gleichmäßig mit Abstand dazwischen */
+    align-items: center; /* Zentriert die Elemente vertikal */
+    max-width: 1200px; /* Setzt die maximale Breite auf 1200px */
+    margin: 0 auto; /* Zentriert den Header-Inhalt horizontal */
+    padding: 0 20px; /* Fügt links und rechts eine Polsterung von 20px hinzu */
+}
+
+nav {
+    display: flex; /* Verwendet Flexbox für die Navigationselemente */
+    align-items: center; /* Zentriert die Navigationselemente vertikal */
+}
+
+nav ul {
+    list-style: none; /* Entfernt die Standard-Aufzählungszeichen */
+    display: flex; /* Verwendet Flexbox für die Listen-Elemente */
+    padding: 0; /* Entfernt die Standard-Padding */
+    margin: 0; /* Entfernt die Standard-Margin */
+}
+
+nav ul li {
+    margin: 0 20px; /* Fügt links und rechts eine Margin von 20px hinzu */
+}
+
+nav ul li a {
+    text-decoration: none; /* Entfernt die Standard-Unterstreichung der Links */
+    color: #fff; /* Setzt die Linkfarbe auf weiß */
+    font-weight: bold; /* Macht den Text fett */
+    padding: 10px 15px; /* Fügt eine Polsterung von 10px oben/unten und 15px links/rechts hinzu */
+    background-color: #567d1d; /* Setzt die Hintergrundfarbe der Links auf ein mittleres Grün */
+    border-radius: 20px; /* Rundet die Ecken der Links ab */
+}
+
+nav ul li a:hover {
+    background-color: #ffcc00; /* Ändert die Hintergrundfarbe bei Hover auf gelb */
+    color: #333; /* Ändert die Textfarbe bei Hover auf dunkelgrau */
+}
+
+.social-icons {
+    display: flex; /* Verwendet Flexbox für die Social Media Icons */
+    align-items: center; /* Zentriert die Icons vertikal */
+    margin-left: 20px; /* Fügt links eine Margin von 20px hinzu */
+}
+
+.social-icons a {
+    margin-left: 10px; /* Fügt links eine Margin von 10px hinzu */
+    display: flex; /* Verwendet Flexbox für die Icons */
+    align-items: center; /* Zentriert die Icons vertikal */
+    justify-content: center; /* Zentriert die Icons horizontal */
+    width: 40px; /* Setzt die Breite der Icons auf 40px */
+    height: 40px; /* Setzt die Höhe der Icons auf 40px */
+    background-color: #567d1d; /* Setzt die Hintergrundfarbe der Icons auf ein mittleres Grün */
+    border-radius: 50%; /* Rundet die Icons zu Kreisen ab */
+    transition: background-color 0.3s, transform 0.3s; /* Fügt eine Übergangsanimation für die Hintergrundfarbe und Transformation hinzu */
+}
+
+.social-icons a:hover {
+    background-color: #ffcc00; /* Ändert die Hintergrundfarbe bei Hover auf gelb */
+    transform: scale(1.1); /* Vergrößert die Icons bei Hover */
+}
+
+.social-icons img {
+    height: 20px; /* Setzt die Höhe der Icons auf 20px */
+    width: 20px; /* Setzt die Breite der Icons auf 20px */
+    transition: transform 0.3s; /* Fügt eine Übergangsanimation für die Transformation hinzu */
+}
+
+.social-icons img:hover {
+    transform: scale(1.2); /* Vergrößert die Icons bei Hover */
+}
+
+/* Sticky Navigation */
+header.sticky {
+    position: fixed; /* Fixiert den Header beim Scrollen */
+    top: 0; /* Positioniert den Header am oberen Rand */
+    width: 100%; /* Setzt die Breite auf 100% */
+    z-index: 1000; /* Stellt sicher, dass der Header über anderen Elementen liegt */
+    box-shadow: 0 4px 2px -2px gray; /* Fügt einen Schatten unter dem Header hinzu */
+}
+
+/* Hauptinhalt */
+main {
+    max-width: 1200px;
+    margin: 100px auto 20px; /* Erhöhter oberer Margin wegen fixed header */
+    padding: 0 20px;
+    position: relative;
+    z-index: 1; /* Niedrigerer z-index als header */
+}
+.article-header {
+    text-align: center;
+    margin-bottom: 3rem;
+    padding: 2rem;
+    background-color: rgba(255, 255, 255, 0.95);
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    position: relative;
+    z-index: 1;
+}
+
+.article-intro {
+    max-width: 800px;
+    margin: 0 auto;
+    font-size: 1.2rem;
+    color: #333;
+    line-height: 1.6;
+}
+
+.klimawandel-article h1 {
+    color: #334d00;
+    font-size: 2.5em;
+    margin-bottom: 1.5rem;
+    text-shadow: none;
+}
+
+.article-content {
+    background-color: #fff;
+    padding: 2rem;
+    border-radius: 10px;
+    margin-top: 2rem;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    position: relative;
+    z-index: 1;
+}
+/* Generelles Article Layout */
+article {
+    max-width: 1000px;
+    margin: 120px auto 40px;
+    background: #fff;
+    border-radius: 15px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+    overflow: hidden;
+}
+
+
+article h1 {
+    color: #228B22; /* Setzt die Farbe der Hauptüberschrift auf ein mittleres Grün */
+    text-align: center; /* Zentriert die Hauptüberschrift */
+    font-size: 2.5em; /* Setzt die Schriftgröße der Hauptüberschrift auf 2.5em */
+    margin-bottom: 20px; /* Fügt unten eine Margin von 20px hinzu */
+}
+
+article h2 {
+    color: #556b2f; /* Setzt die Farbe der Unterüberschriften auf ein dunkles Grün */
+    font-size: 1.5em; /* Setzt die Schriftgröße der Unterüberschriften auf 1.5em */
+    margin-top: 20px; /* Fügt oben eine Margin von 20px hinzu */
+}
+
+article p {
+    line-height: 1.6; /* Erhöht den Zeilenabstand für bessere Lesbarkeit */
+    margin: 10px 0; /* Fügt oben und unten eine Margin von 10px hinzu */
+    text-align: left; /* Richtet den Text links aus */
+}
+
+article img {
+    max-width: 100%; /* Setzt die maximale Breite der Bilder auf 100% */
+    height: auto; /* Erhält das Seitenverhältnis der Bilder */
+    margin: 20px 0; /* Fügt oben und unten eine Margin von 20px hinzu */
+}
+
+article ul {
+    list-style: disc; /* Setzt den Listenstil auf Punkte */
+    margin-left: 20px; /* Fügt links eine Margin von 20px hinzu */
+    text-align: left; /* Richtet die Liste links aus */
+}
+
+/* Hero Section */
+.hero {
+    background-color: #f4f4f4; /* Setzt die Hintergrundfarbe auf ein helles Grau */
+    text-align: center; /* Zentriert den Text */
+    padding: 50px 20px; /* Fügt oben und unten eine Polsterung von 50px und links und rechts von 20px hinzu */
+}
+
+.hero-text {
+    max-width: 800px; /* Setzt die maximale Breite auf 800px */
+    margin: 0 auto; /* Zentriert den Text horizontal */
+}
+
+.hero .intro-text {
+    background-color: #7a9d6d; /* Setzt die Hintergrundfarbe auf ein mittleres Grün */
+    color: #333; /* Setzt die Textfarbe auf dunkelgrau */
+    padding: 20px; /* Fügt eine Polsterung von 20px hinzu */
+    border-radius: 10px; /* Rundet die Ecken ab */
+    font-size: 1.2em; /* Setzt die Schriftgröße auf 1.2em */
+}
+
+.hero h2 {
+    color: #333; /* Setzt die Farbe der Unterüberschrift auf dunkelgrau */
+    font-size: 1.5em; /* Setzt die Schriftgröße auf 1.5em */
+    margin: 20px 0 0; /* Fügt oben eine Margin von 20px hinzu */
+}
+
+.hero h1 {
+    color: #556b2f; /* Setzt die Farbe der Hauptüberschrift auf ein dunkles Grün */
+    font-size: 2.5em; /* Setzt die Schriftgröße auf 2.5em */
+    margin: 10px 0 0; /* Fügt oben eine Margin von 10px hinzu */
+}
+
+/* About Section */
+.about {
+    padding: 50px 20px; /* Fügt oben und unten eine Polsterung von 50px und links und rechts von 20px hinzu */
+    background-color: #fff; /* Setzt die Hintergrundfarbe auf weiß */
+    text-align: center; /* Zentriert den Text */
+    border: 1px solid #ddd; /* Fügt eine hellgraue Umrandung hinzu */
+    margin-bottom: 20px; /* Fügt unten eine Margin von 20px hinzu */
+}
+
+.about h2 {
+    font-size: 2em; /* Setzt die Schriftgröße der Unterüberschrift auf 2em */
+    margin-bottom: 0.5em; /* Fügt unten eine Margin von 0.5em hinzu */
+}
+
+.about p {
+    max-width: 800px; /* Setzt die maximale Breite auf 800px */
+    margin: 0 auto; /* Zentriert den Text horizontal */
+    font-size: 1.1em; /* Setzt die Schriftgröße auf 1.1em */
+    line-height: 1.6; /* Erhöht den Zeilenabstand für bessere Lesbarkeit */
+}
+
+/* Highlights Section */
+.highlights {
+    padding: 50px 20px; /* Fügt oben und unten eine Polsterung von 50px und links und rechts von 20px hinzu */
+    background-color: #fff; /* Setzt die Hintergrundfarbe auf weiß */
+    text-align: center; /* Zentriert den Text */
+    border: 1px solid #ddd; /* Fügt eine hellgraue Umrandung hinzu */
+}
+
+.highlights h2 {
+    font-size: 2em; /* Setzt die Schriftgröße der Unterüberschrift auf 2em */
+    margin-bottom: 0.5em; /* Fügt unten eine Margin von 0.5em hinzu */
+}
+
+.highlight-cards {
+    display: flex; /* Verwendet Flexbox für die Anordnung der Karten */
+    justify-content: center; /* Zentriert die Karten horizontal */
+    flex-wrap: wrap; /* Ermöglicht das Umbruch der Karten in die nächste Zeile */
+}
+
+.card {
+    background-color: #fff; /* Setzt die Hintergrundfarbe der Karten auf weiß */
+    padding: 20px; /* Fügt eine Polsterung von 20px hinzu */
+    margin: 20px; /* Fügt eine Margin von 20px hinzu */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Fügt einen leichten Schatten hinzu */
+    border-radius: 10px; /* Rundet die Ecken der Karten ab */
+    max-width: 300px; /* Setzt die maximale Breite auf 300px */
+    text-align: left; /* Richtet den Text links aus */
+}
+
+.card h3 {
+    font-size: 1.5em; /* Setzt die Schriftgröße der Kartenüberschrift auf 1.5em */
+    margin-bottom: 0.5em; /* Fügt unten eine Margin von 0.5em hinzu */
+    color: #556b2f; /* Setzt die Farbe der Kartenüberschrift auf ein dunkles Grün */
+}
+
+.card p {
+    font-size: 1em; /* Setzt die Schriftgröße des Karteninhalts auf 1em */
+    line-height: 1.4; /* Erhöht den Zeilenabstand für bessere Lesbarkeit */
+}
+
+.card a {
+    color: #6b8e23; /* Setzt die Linkfarbe auf ein mittleres Grün */
+    text-decoration: none; /* Entfernt die Standard-Unterstreichung der Links */
+}
+
+.card a:hover {
+    text-decoration: underline; /* Unterstreicht den Link bei Hover */
+}
+
+/* Seitenleiste */
+.sidebar {
+    flex: 1; /* Nimmt den verbleibenden Platz ein */
+    margin-top: 20px; /* Fügt oben eine Margin von 20px hinzu */
+}
+
+.sidebar .fact-box {
+    background-color: #6b8e23; /* Setzt die Hintergrundfarbe auf ein mittleres Grün */
+    color: #fff; /* Setzt die Textfarbe auf weiß */
+    padding: 20px; /* Fügt eine Polsterung von 20px hinzu */
+    margin-bottom: 20px; /* Fügt unten eine Margin von 20px hinzu */
+    border-radius: 10px; /* Rundet die Ecken ab */
+}
+
+/* Footer */
+footer {
+    text-align: center; /* Zentriert den Text */
+    padding: 1em 0; /* Fügt oben und unten eine Polsterung von 1em hinzu */
+    background-color: #334d00; /* Setzt die Hintergrundfarbe auf ein dunkles Grün */
+    color: #fff; /* Setzt die Textfarbe auf weiß */
+}
+
+footer a {
+    color: #ffcc00; /* Setzt die Linkfarbe auf gelb */
+    margin: 0 10px; /* Fügt links und rechts eine Margin von 10px hinzu */
+    text-decoration: none; /* Entfernt die Standard-Unterstreichung der Links */
+    font-weight: bold; /* Macht den Text fett */
+    transition: color 0.3s; /* Fügt eine Übergangsanimation für die Farbe hinzu */
+}
+
+footer a:hover {
+    color: #fff; /* Ändert die Linkfarbe bei Hover auf weiß */
+}
+
+/* Scroll to Top Button */
+#scrollTopBtn {
+    display: none; /* Versteckt den Button standardmäßig */
+    position: fixed; /* Fixiert den Button */
+    bottom: 20px; /* Positioniert den Button 20px vom unteren Rand entfernt */
+    right: 30px; /* Positioniert den Button 30px vom rechten Rand entfernt */
+    z-index: 99; /* Stellt sicher, dass der Button über anderen Elementen liegt */
+    font-size: 18px; /* Setzt die Schriftgröße auf 18px */
+    border: none; /* Entfernt den Standard-Rahmen */
+    outline: none; /* Entfernt die Standard-Umrandung */
+    background-color: #556b2f; /* Setzt die Hintergrundfarbe auf ein dunkles Grün */
+    color: white; /* Setzt die Textfarbe auf weiß */
+    cursor: pointer; /* Ändert den Mauszeiger auf eine Hand */
+    padding: 15px; /* Fügt eine Polsterung von 15px hinzu */
+    border-radius: 10px; /* Rundet die Ecken ab */
+}
+
+#scrollTopBtn:hover {
+    background-color: #333; /* Ändert die Hintergrundfarbe bei Hover auf dunkelgrau */
+}
+
+/* Kontaktformular */
+form {
+    display: flex; /* Verwendet Flexbox für das Formular */
+    flex-direction: column; /* Ordnet die Formularelemente untereinander an */
+}
+
+form label {
+    margin-top: 10px; /* Fügt oben eine Margin von 10px hinzu */
+    margin-bottom: 5px; /* Fügt unten eine Margin von 5px hinzu */
+    font-weight: bold; /* Macht den Text fett */
+}
+
+form input, form textarea {
+    padding: 10px; /* Fügt eine Polsterung von 10px hinzu */
+    margin-bottom: 20px; /* Fügt unten eine Margin von 20px hinzu */
+    border: 1px solid #ccc; /* Setzt eine hellgraue Umrandung */
+    border-radius: 5px; /* Rundet die Ecken ab */
+    font-size: 1em; /* Setzt die Schriftgröße auf 1em */
+}
+
+form button {
+    margin-top: 1em; /* Fügt oben eine Margin von 1em hinzu */
+    padding: 0.5em; /* Fügt eine Polsterung von 0.5em hinzu */
+    background-color: #333; /* Setzt die Hintergrundfarbe auf dunkelgrau */
+    color: #fff; /* Setzt die Textfarbe auf weiß */
+    border: none; /* Entfernt den Standard-Rahmen */
+    cursor: pointer; /* Ändert den Mauszeiger auf eine Hand */
+}
+
+form button:hover {
+    background-color: #555; /* Ändert die Hintergrundfarbe bei Hover auf ein helleres Grau */
+}
+
+.rating {
+    display: flex; /* Verwendet Flexbox für die Bewertung */
+    flex-direction: row-reverse; /* Ordnet die Sterne von rechts nach links an */
+    justify-content: center; /* Zentriert die Sterne horizontal */
+}
+
+.rating input {
+    display: none; /* Versteckt die Standard-Radiobuttons */
+}
+
+.rating label {
+    font-size: 2em; /* Setzt die Schriftgröße auf 2em */
+    color: #ccc; /* Setzt die Standardfarbe der Sterne auf hellgrau */
+    padding: 0 5px; /* Fügt links und rechts eine Polsterung von 5px hinzu */
+    cursor: pointer; /* Ändert den Mauszeiger auf eine Hand */
+    transition: color 0.2s; /* Fügt eine Übergangsanimation für die Farbe hinzu */
+}
+
+.rating input:checked ~ label,
+.rating label:hover,
+.rating label:hover ~ label {
+    color: #ffcc00; /* Ändert die Farbe der Sterne bei Hover und Auswahl auf gelb */
+}
+
+button[type="submit"] {
+    padding: 10px 20px; /* Fügt oben und unten eine Polsterung von 10px und links und rechts von 20px hinzu */
+    background-color: #556b2f; /* Setzt die Hintergrundfarbe auf ein dunkles Grün */
+    color: #fff; /* Setzt die Textfarbe auf weiß */
+    border: none; /* Entfernt den Standard-Rahmen */
+    border-radius: 5px; /* Rundet die Ecken ab */
+    font-size: 1em; /* Setzt die Schriftgröße auf 1em */
+    cursor: pointer; /* Ändert den Mauszeiger auf eine Hand */
+    transition: background-color 0.3s; /* Fügt eine Übergangsanimation für die Hintergrundfarbe hinzu */
+}
+
+button[type="submit"]:hover {
+    background-color: #6b8e23; /* Ändert die Hintergrundfarbe bei Hover auf ein helleres Grün */
+}
+
+/* Stile für Blog-Bilder */
+.blog-image {
+    width: 100%; /* Setzt die Breite auf 100% */
+    max-width: 600px; /* Setzt die maximale Breite auf 600px */
+    height: auto; /* Erhält das Seitenverhältnis der Bilder */
+    margin: 20px auto; /* Fügt oben und unten eine Margin von 20px hinzu und zentriert das Bild */
+    border: 2px solid #ccc; /* Fügt eine hellgraue Umrandung hinzu */
+    border-radius: 10px; /* Rundet die Ecken ab */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Fügt einen leichten Schatten hinzu */
+    display: block; /* Macht das Bild zu einem Block-Element */
+}
+
+/* Stile für Tipp- und Faktenboxen */
+.tip-box, .fact-box {
+    background-color: #6b8e23; /* Setzt die Hintergrundfarbe auf ein mittleres Grün */
+    color: #fff; /* Setzt die Textfarbe auf weiß */
+    padding: 20px; /* Fügt eine Polsterung von 20px hinzu */
+    margin: 20px 0; /* Fügt oben und unten eine Margin von 20px hinzu */
+    border-radius: 10px; /* Rundet die Ecken ab */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Fügt einen leichten Schatten hinzu */
+}
+
+/* Anpassungen für Mobilgeräte */
+@media (max-width: 768px) {
+    .header-content, .hero-text, .about, .highlight-cards, .sidebar {
+        padding: 10px; /* Reduziert die Polsterung auf 10px */
+    }
+
+    .highlight-cards {
+        flex-direction: column; /* Ordnet die Karten untereinander an */
+        align-items: center; /* Zentriert die Karten horizontal */
+    }
+
+    .card {
+        max-width: 90%; /* Setzt die maximale Breite auf 90% */
+    }
+}
+
+/* Stile für kleinere Blog-Bilder */
+.blog-image-small {
+    width: 50%; /* Setzt die Breite auf 50% */
+    max-width: 400px; /* Setzt die maximale Breite auf 400px */
+    height: auto; /* Erhält das Seitenverhältnis der Bilder */
+    margin: 20px auto; /* Fügt oben und unten eine Margin von 20px hinzu und zentriert das Bild */
+    border: 2px solid #ccc; /* Fügt eine hellgraue Umrandung hinzu */
+    border-radius: 10px; /* Rundet die Ecken ab */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Fügt einen leichten Schatten hinzu */
+    display: block; /* Macht das Bild zu einem Block-Element */
+}
+
+/* Zentriert den Video-Player */
+.video-player {
+    display: flex; /* Verwendet Flexbox */
+    justify-content: center; /* Zentriert den Video-Player horizontal */
+    margin-top: 20px; /* Fügt oben eine Margin von 20px hinzu */
+}
+
+
+
+
+/* Lazy Loading */
+.lazyload {
+    opacity: 0; /* Setzt die Anfangs-Deckkraft auf 0 */
+    transition: opacity 300ms; /* Fügt eine Übergangsanimation für die Deckkraft hinzu */
+}
+
+.loaded {
+    opacity: 1; /* Setzt die Deckkraft auf 1, wenn das Bild geladen ist */
+}
+
+
+
+/* Accordion Styles */
+.faq-section {
+    max-width: 800px;
+    margin: 3rem auto;
+    padding: 0 1rem;
+}
+
+#faq-accordion {
+    margin-top: 2rem;
+    border-radius: 8px;
+    overflow: hidden;
+    border: 1px solid #e0e0e0;
+}
+
+#faq-accordion h3.ui-accordion-header {
+    background: #334d00;
+    color: white;
+    padding: 1rem 2rem;
+    margin: 0;
+    cursor: pointer;
+    border: none;
+    border-bottom: 1px solid rgba(255,255,255,0.1);
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    font-size: 1.1rem;
+    position: relative;
+}
+
+#faq-accordion h3.ui-accordion-header:hover {
+    background: #567d1d;
+}
+
+#faq-accordion h3.ui-accordion-header-active {
+    background: #2d4a0f;
+    color: #fff;
+}
+
+#faq-accordion .ui-accordion-content {
+    padding: 1.5rem 2rem;
+    background: #f8faf5;
+    border: 1px solid #e0e8d5;
+    line-height: 1.6;
+}
+
+/* Icons */
+.ui-icon {
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    right: 1rem;
+    top: 50%;
+    transform: translateY(-50%);
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M7 10l5 5 5-5z' fill='%23ffffff'/%3E%3C/svg%3E");
+    background-size: contain;
+}
+
+.ui-accordion-header-active .ui-icon {
+    transform: translateY(-50%) rotate(180deg);
+}
+
+/* Tooltip Anpassungen */
+.eco-tooltip {
+    background: #334d00;
+    color: white;
+    padding: 8px 12px;
+    border-radius: 4px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+    font-size: 0.9rem;
+    max-width: 200px;
+    border: none;
+}
+
+.eco-tooltip::before {
+    content: '';
+    position: absolute;
+    top: -5px;
+    left: 50%;
+    transform: translateX(-50%);
+    border: 5px solid transparent;
+    border-bottom-color: #334d00;
+}

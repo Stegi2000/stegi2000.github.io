@@ -1,0 +1,106 @@
+/* Carousel Styles angepasst an dein Design */
+.highlight-cards {
+    position: relative;
+    height: 450px; /* Höhe anpassen je nach Kartengröße */
+    margin: 40px 0;
+}
+
+.carousel-controls {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 2rem;
+}
+
+.carousel-btn {
+    background: #334d00;
+    color: white;
+    border: none;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2rem;
+    transition: all 0.3s ease;
+}
+
+.carousel-btn:hover:not(:disabled) {
+    background: #567d1d;
+    transform: scale(1.1);
+}
+
+.carousel-btn:disabled {
+    background: #ccc;
+    cursor: not-allowed;
+}
+
+.carousel-indicator {
+    background: #f4f4f4;
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    font-weight: bold;
+    color: #334d00;
+}
+
+/* Anpassungen für die Cards im Carousel */
+.card {
+    opacity: 0;
+    transform: scale(0.8);
+    position: absolute;
+    width: calc(100% - 40px);
+    max-width: 300px;
+    left: 0;
+    right: 0;
+    margin: auto;
+    transition: all 0.5s ease-in-out;
+}
+
+.card.active {
+    opacity: 1;
+    transform: scale(1);
+}
+
+/* Animation für Bildübergänge */
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: scale(0.8);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+@keyframes slideOut {
+    from {
+        opacity: 1;
+        transform: scale(1);
+    }
+    to {
+        opacity: 0;
+        transform: scale(0.8);
+    }
+}
+
+/* Responsive Anpassungen */
+@media (max-width: 768px) {
+    .highlight-cards {
+        height: 400px;
+    }
+
+    .carousel-btn {
+        width: 35px;
+        height: 35px;
+        font-size: 1rem;
+    }
+
+    .carousel-indicator {
+        padding: 0.3rem 0.8rem;
+        font-size: 0.9rem;
+    }
+}
